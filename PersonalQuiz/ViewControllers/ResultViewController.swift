@@ -35,9 +35,9 @@ final class ResultViewController: UIViewController {
         for animal in animals {
             mostOftenAnimals[animal, default: 0] += 1
         }
-        let sortmostOftenAnimals = mostOftenAnimals
+        let sortMostOftenAnimals = mostOftenAnimals
             .sorted { $0.value > $1.value }
-        guard let mostAnimal = sortmostOftenAnimals.first?.key
+        guard let mostAnimal = sortMostOftenAnimals.first?.key
         else { return }
         
         updateUI(with: mostAnimal)
